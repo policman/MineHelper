@@ -1,0 +1,14 @@
+SELECT * FROM users;
+
+CREATE TABLE IF NOT EXISTS users (
+	id SERIAL PRIMARY KEY,
+	telegram_id BIGINT UNIQUE NOT NULL,
+	first_name TEXT NOT NULL,
+	last_name TEXT,
+	username TEXT,
+	is_bot BOOLEAN,
+	organization TEXT,
+	profession TEXT,
+	location_tag TEXT,
+	registered_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
